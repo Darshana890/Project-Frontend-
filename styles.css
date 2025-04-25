@@ -1,0 +1,99 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.search-container {
+    position: relative;
+}
+
+#autocomplete-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+}
+
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+.main-container {
+    display: flex;
+    width: 80%;
+}
+
+.filter-panel {
+    width: 250px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.filter-panel > div {
+    margin-bottom: 15px;
+}
+
+.doctor-list-container {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.doctor-card {
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.doctor-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.doctor-specialty {
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.doctor-experience {
+    color: green;
+    margin-bottom: 5px;
+}
+
+.doctor-fee {
+    font-weight: bold;
+    color: blue;
+}

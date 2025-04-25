@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Listing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="search-container">
+            <input type="text" id="autocomplete-input" data-testid="autocomplete-input" placeholder="Search by doctor name">
+            <ul id="suggestions"></ul>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="filter-panel">
+            <div data-testid="filter-header-moc">Consultation Mode</div>
+            <div>
+                <label>
+                    <input type="radio" name="consultationType" value="video" data-testid="filter-video-consult"> Video Consult
+                </label><br>
+                <label>
+                    <input type="radio" name="consultationType" value="in_clinic" data-testid="filter-in-clinic"> In Clinic
+                </label>
+            </div>
+
+            <div data-testid="filter-header-speciality">Speciality</div>
+            <div>
+                <label><input type="checkbox" value="General Physician" data-testid="filter-specialty-General-Physician"> General Physician</label><br>
+                <label><input type="checkbox" value="Dentist" data-testid="filter-specialty-Dentist"> Dentist</label><br>
+                <label><input type="checkbox" value="Dermatologist" data-testid="filter-specialty-Dermatologist"> Dermatologist</label><br>
+                <label><input type="checkbox" value="Paediatrician" data-testid="filter-specialty-Paediatrician"> Paediatrician</label><br>
+                <label><input type="checkbox" value="Gynaecologist" data-testid="filter-specialty-Gynaecologist"> Gynaecologist</label><br>
+                <label><input type="checkbox" value="ENT" data-testid="filter-specialty-ENT"> ENT</label><br>
+                <label><input type="checkbox" value="Diabetologist" data-testid="filter-specialty-Diabetologist"> Diabetologist</label><br>
+                <label><input type="checkbox" value="Cardiologist" data-testid="filter-specialty-Cardiologist"> Cardiologist</label><br>
+                <label><input type="checkbox" value="Physiotherapist" data-testid="filter-specialty-Physiotherapist"> Physiotherapist</label><br>
+                <label><input type="checkbox" value="Endocrinologist" data-testid="filter-specialty-Endocrinologist"> Endocrinologist</label><br>
+                <label><input type="checkbox" value="Orthopaedic" data-testid="filter-specialty-Orthopaedic"> Orthopaedic</label><br>
+                <label><input type="checkbox" value="Ophthalmologist" data-testid="filter-specialty-Ophthalmologist"> Ophthalmologist</label><br>
+                <label><input type="checkbox" value="Gastroenterologist" data-testid="filter-specialty-Gastroenterologist"> Gastroenterologist</label><br>
+                <label><input type="checkbox" value="Pulmonologist" data-testid="filter-specialty-Pulmonologist"> Pulmonologist</label><br>
+                <label><input type="checkbox" value="Psychiatrist" data-testid="filter-specialty-Psychiatrist"> Psychiatrist</label><br>
+                <label><input type="checkbox" value="Urologist" data-testid="filter-specialty-Urologist"> Urologist</label><br>
+                <label><input type="checkbox" value="Dietitian/Nutritionist" data-testid="filter-specialty-Dietitian-Nutritionist"> Dietitian/Nutritionist</label><br>
+                <label><input type="checkbox" value="Psychologist" data-testid="filter-specialty-Psychologist"> Psychologist</label><br>
+                <label><input type="checkbox" value="Sexologist" data-testid="filter-specialty-Sexologist"> Sexologist</label><br>
+                <label><input type="checkbox" value="Nephrologist" data-testid="filter-specialty-Nephrologist"> Nephrologist</label><br>
+                <label><input type="checkbox" value="Neurologist" data-testid="filter-specialty-Neurologist"> Neurologist</label><br>
+                <label><input type="checkbox" value="Oncologist" data-testid="filter-specialty-Oncologist"> Oncologist</label><br>
+                <label><input type="checkbox" value="Ayurveda" data-testid="filter-specialty-Ayurveda"> Ayurveda</label><br>
+                <label><input type="checkbox" value="Homeopath" data-testid="filter-specialty-Homeopath"> Homeopath</label><br>
+            </div>
+
+            <div data-testid="filter-header-sort">Sort By</div>
+            <div>
+                <label>
+                    <input type="radio" name="sortBy" value="fees" data-testid="sort-fees"> Fees (Ascending)
+                </label><br>
+                <label>
+                    <input type="radio" name="sortBy" value="experience" data-testid="sort-experience"> Experience (Descending)
+                </label>
+            </div>
+        </aside>
+
+        <main class="doctor-list-container" id="doctor-list">
+            </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
